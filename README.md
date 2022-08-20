@@ -46,5 +46,5 @@ Give us a star ⭐️ if you appreciate
 src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" /></a> 
 <a href="https://www.twitter.com/jacob1dev" target="_blank" rel="noreferrer"><img
 src="https://img.shields.io/twitter/follow/jacob1dev?logo=twitter&style=for-the-badge&color=0891b2&labelColor=1c1917"
-/></a><a href="https://www.linkedin.com/in/jacobdeveloper" target="_blank" rel="noreferrer"><img
+/></a> <a href="https://www.linkedin.com/in/jacobdeveloper" target="_blank" rel="noreferrer"><img
 src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
