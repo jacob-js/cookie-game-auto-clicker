@@ -3,7 +3,6 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from threading import Timer
 
 from utils import get_store_item_name, get_store_item_count, buy_item
 
@@ -25,17 +24,16 @@ items = {
 
 
 timeout = time.time() + (60*5)
+buy_timeout = time.time() + 5
 time.sleep(1)
 while True:
     cookie.click()
     money = driver.find_element(By.ID, "money").text
     money = int(money.replace(",", ""))
     can_i_buy = {item: count for (item, count) in items.items() if count <= money}
-    buy_timeout = time.time()
-    if len(can_i_buy) > 0:
-        def buy():
-            Timer(5, buy).start()
-            buy_item(can_i_buy, driver)
+    if time.time() > buy_timeout:
+        buy_item(can_i_buy, driver)
+        buy_timeout += 5
     if time.time() > timeout:
         break
 
